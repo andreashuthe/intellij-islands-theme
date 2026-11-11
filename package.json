@@ -2,7 +2,7 @@
   "name": "intellij-islands-theme",
   "displayName": "Islands Theme (IntelliJ-inspired)",
   "description": "Islands Dark & Islands Light for VS Code – the colors of the IntelliJ IDEA Islands themes (editor, Java/Kotlin semantic highlighting and UI), generated from the JetBrains sources.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "andreashuthe",
   "author": "Andreas Huth",
   "license": "Apache-2.0",
