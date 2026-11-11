@@ -8,6 +8,8 @@ and uses it as the GitHub release notes.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-11
+
 ### Added
 - **Islands Dark** and **Islands Light**, generated from IntelliJ IDEA's Islands editor schemes and UI themes.
 - Syntax colors resolved like IntelliJ does (own value → fallback key → parent scheme), for Java, Kotlin, XML/HTML,
