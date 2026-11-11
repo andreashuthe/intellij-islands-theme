@@ -1,0 +1,13 @@
+Islands Theme (IntelliJ-inspired) for Visual Studio Code
+Copyright 2026 Andreas Huth
+
+The color values of this theme are generated from the IntelliJ IDEA Community Edition
+sources (editor color schemes and UI themes in the jetbrains/ folder):
+
+  This software includes code from IntelliJ IDEA
+  Copyright (C) JetBrains s.r.o.
+  https://www.jetbrains.com/idea/
+  Licensed under the Apache License, Version 2.0
+
+IntelliJ IDEA and JetBrains are trademarks of JetBrains s.r.o. This project is not affiliated with,
+endorsed or sponsored by JetBrains.

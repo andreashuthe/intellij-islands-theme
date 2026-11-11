@@ -1,0 +1,6 @@
+{
+  "name": "shop",
+  "port": 8080,
+  "enabled": true,
+  "tags": ["java", null]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "intellij-islands-theme",
+  "displayName": "Islands Theme (IntelliJ-inspired)",
+  "description": "Islands Dark & Islands Light for VS Code – the colors of the IntelliJ IDEA Islands themes (editor, Java/Kotlin semantic highlighting and UI), generated from the JetBrains sources.",
+  "version": "0.1.0",
+  "publisher": "andreashuthe",
+  "author": "Andreas Huth",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreashuthe/intellij-islands-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andreashuthe/intellij-islands-theme/issues"
+  },
+  "homepage": "https://github.com/andreashuthe/intellij-islands-theme#readme",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#26282C",
+    "theme": "dark"
+  },
+  "pricing": "Free",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color theme",
+    "intellij",
+    "islands",
+    "jetbrains",
+    "dark",
+    "light",
+    "java",
+    "kotlin"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "id": "Islands Dark",
+        "label": "Islands Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/islands-dark-color-theme.json"
+      },
+      {
+        "id": "Islands Light",
+        "label": "Islands Light",
+        "uiTheme": "vs",
+        "path": "./themes/islands-light-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node scripts/build.js && node --test test/*.test.js",
+    "screenshots": "node scripts/screenshots.js",
+    "package": "npm run build && vsce package",
+    "test:vscode": "node -e \"require('@vscode/test-electron').downloadAndUnzipVSCode('stable').then(p=>console.log(p))\""
+  },
+  "devDependencies": {
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.1.0",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  }
+}

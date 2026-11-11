@@ -1,0 +1,14 @@
+{
+  "name": "islands-preview-tokens",
+  "displayName": "Islands preview helper",
+  "description": "Screenshot helper: emulates the JetBrains language server's semantic tokens.",
+  "version": "0.0.0",
+  "publisher": "andreashuthe",
+  "private": true,
+  "engines": { "vscode": "^1.85.0" },
+  "main": "./extension.js",
+  "activationEvents": ["onLanguage:java", "onLanguage:kotlin"],
+  "contributes": {
+    "languages": [{ "id": "kotlin", "extensions": [".kt", ".kts"], "aliases": ["Kotlin"] }]
+  }
+}

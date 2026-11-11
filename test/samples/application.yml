@@ -1,0 +1,6 @@
+server:
+  port: 8080 # default port
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/shop
+    enabled: true
