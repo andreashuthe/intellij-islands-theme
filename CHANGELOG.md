@@ -16,3 +16,6 @@ and uses it as the GitHub release notes.
   fields, type parameters, annotations, Kotlin function declarations, package-level functions, mutable `var`s,
   deprecated members.
 - IntelliJ UI colors incl. VS Code's modern (floating) layout, file status, diff and console colors.
+- Language specific colors like the JetBrains IDEs for Python (PyCharm), TypeScript/JavaScript, HTML, CSS (WebStorm),
+  Go (GoLand) and Rust (RustRover), approximated for PHP and C/C++ – TextMate scopes and semantic tokens of
+  Pylance, VS Code's TS server, rust-analyzer, gopls and clangd.

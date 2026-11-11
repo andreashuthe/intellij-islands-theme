@@ -88,7 +88,7 @@ async function shoot({ theme, files, name, sidebar = true, extraSettings = {} })
   if (!sidebar) await w.keyboard.press('Control+B');
   // put the caret into the method so the current line and identifier highlights show
   const target = await w.evaluate(() => {
-    const line = [...document.querySelectorAll('.editor-instance .view-line')].find(l => /public void lock|fun total/.test(l.textContent.replace(/ /g, ' ')));
+    const line = [...document.querySelectorAll('.editor-instance .view-line')].find(l => /public void lock|fun total|total\(|def total|Total\(|fn total/.test(l.textContent.replace(/ /g, ' ')));
     if (!line) return null;
     const b = line.getBoundingClientRect();
     return { x: b.x + 160, y: b.y + b.height / 2 };
@@ -116,6 +116,14 @@ async function shoot({ theme, files, name, sidebar = true, extraSettings = {} })
     { name: 'light-java', theme: 'Islands Light', files: ['EntityRepositoryDao.java'] },
     { name: 'dark-kotlin', theme: 'Islands Dark', files: ['OrderService.kt'] },
     { name: 'light-kotlin', theme: 'Islands Light', files: ['OrderService.kt'] },
+    { name: 'dark-typescript', theme: 'Islands Dark', files: ['service.ts'] },
+    { name: 'dark-python', theme: 'Islands Dark', files: ['orders.py'] },
+    { name: 'dark-go', theme: 'Islands Dark', files: ['order.go'] },
+    { name: 'dark-rust', theme: 'Islands Dark', files: ['order.rs'] },
+    { name: 'dark-css', theme: 'Islands Dark', files: ['styles.css'] },
+    { name: 'dark-php', theme: 'Islands Dark', files: ['OrderService.php'] },
+    { name: 'dark-cpp', theme: 'Islands Dark', files: ['order.cpp'] },
+    { name: 'light-typescript', theme: 'Islands Light', files: ['service.ts'] },
   ];
   for (const s of shots) if (!only || s.name === only) await shoot(s);
 })().catch(e => {

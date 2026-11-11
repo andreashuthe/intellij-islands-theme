@@ -9,5 +9,9 @@ sources (editor color schemes and UI themes in the jetbrains/ folder):
   https://www.jetbrains.com/idea/
   Licensed under the Apache License, Version 2.0
 
+Rust colors from intellij-rust (https://github.com/intellij-rust/intellij-rust),
+  Copyright (c) 2015 Aleksey Kladov, Evgeny Kurbatsky, Alexey Kudinkin and contributors,
+  Copyright (c) 2016 JetBrains – MIT License (jetbrains/LICENSE-intellij-rust-MIT.txt)
+
 IntelliJ IDEA and JetBrains are trademarks of JetBrains s.r.o. This project is not affiliated with,
 endorsed or sponsored by JetBrains.

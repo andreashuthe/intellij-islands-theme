@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<list>
+    <option name="org.rust.LIFETIME">
+        <value>
+            <option name="FOREGROUND" value="20999d"/>
+            <option name="FONT_TYPE" value="2"/>
+        </value>
+    </option>
+    <option name="org.rust.MACRO">
+        <value>
+            <option name="FOREGROUND" value="4EADE5"/>
+        </value>
+    </option>
+    <option name="org.rust.TYPE_PARAMETER">
+        <value>
+            <option name="FOREGROUND" value="20999d"/>
+        </value>
+    </option>
+    <option name="org.rust.MUT_BINDING">
+        <value>
+            <option name="EFFECT_COLOR" value="bca5c4" />
+            <option name="EFFECT_TYPE" value="1" />
+        </value>
+    </option>
+    <option name="org.rust.MUT_PARAMETER">
+        <value>
+            <option name="EFFECT_COLOR" value="bca5c4" />
+            <option name="EFFECT_TYPE" value="1" />
+        </value>
+    </option>
+    <option name="org.rust.DOC_EMPHASIS">
+        <value>
+            <option name="FONT_TYPE" value="3"/>
+        </value>
+    </option>
+    <option name="org.rust.DOC_STRONG">
+        <value>
+            <option name="FONT_TYPE" value="1" />
+        </value>
+    </option>
+    <option name="org.rust.DIMMED_TEXT">
+        <value>
+            <option name="FOREGROUND" value="606060" />
+        </value>
+    </option>
+    <option name="org.rust.UNSAFE_CODE">
+        <value>
+            <option name="BACKGROUND" value="4D3E3E" />
+        </value>
+    </option>
+    <option name="org.rust.FUNCTION_CALL">
+        <value>
+            <option name="FOREGROUND" value="FFC66D"/>
+        </value>
+    </option>
+    <option name="org.rust.METHOD_CALL">
+        <value>
+            <option name="FOREGROUND" value="FFC66D"/>
+        </value>
+    </option>
+    <option name="org.rust.CFG_DISABLED_CODE">
+        <value>
+            <option name="FOREGROUND" value="686A4E"/>
+        </value>
+    </option>
+    <option name="org.rust.GENERATED_ITEM">
+        <value>
+            <option name="FOREGROUND" value="848504" />
+        </value>
+    </option>
+</list>

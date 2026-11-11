@@ -106,3 +106,44 @@ test('Java sample is colored like in IntelliJ', { skip: !grammar && 'no VS Code 
     check('org.hibernate.LockMode;', e.text);
   }
 });
+
+// Other languages: VS Code's built-in grammars, dark theme. Expected values = what the JetBrains IDE for that language
+// shows with Islands Dark (PyCharm, WebStorm, GoLand, RustRover attributes; PHP and C++ approximated).
+const LANGUAGES = {
+  python: ['orders.py', [
+    ['def', '#CF8E6D'], ['total', '#56A8F5'], ['self', '#94558D'], ['print', '#8888C6'], ['len', '#8888C6'],
+    ['end', '#AA4926'], ['@dataclass', '#B3AE60'], ['"""An order with items."""', '#5F826B', 'italic'], ['None', '#CF8E6D'],
+    ['# sum up all items', '#7A7E85'], ['"42"', '#6AAB73'],
+  ]],
+  typescript: ['service.ts', [
+    ['MAX_ITEMS', '#C77DBA', 'italic'], ['cache', '#C77DBB'], ['total', '#56A8F5'], ['get', '#56A8F5'], ['order', '#A9B7C6'],
+    ['@Injectable', '#B3AE60'], ['/\\d', '#42C3D4'], ['number', '#CF8E6D'], ['helper', '#56A8F5'],
+  ]],
+  javascript: ['app.js', [['API_URL', '#C77DBA', 'italic'], ['#items', '#C77DBB'], ['push', '#56A8F5'], ['fetch', '#56A8F5'], ['response', '#A9B7C6']]],
+  css: ['styles.css', [
+    ['.order-list', '#D5B778'], ['color', '#BABABA'], ['#3871e1', '#56A8F5'], ['!important', '#CF8E6D', 'bold'], ['auto', '#6AAB73'],
+    ['12px', '#2AACB8'], ['rgba', '#D5B778'], ['@media', '#CF8E6D'],
+  ]],
+  html: ['index.html', [['<html', '#D5B778'], ['lang', '#BABABA'], ['"en"', '#6AAB73'], ['&amp;', '#56A8F5'], ['<!-- order list -->', '#7A7E85']]],
+  php: ['OrderService.php', [['<?php', '#CF8E6D'], ['$order', '#C77DBB'], ['MAX_ITEMS', '#C77DBB', 'italic'], ['total', '#56A8F5'], ['echo', '#CF8E6D']]],
+  go: ['order.go', [
+    ['shop', '#AFBF7E'], ['Order', '#6FAFBD'], ['string', '#CC7832'], ['Total', '#56A8F5'], ['Printf', '#B09D79'], ['len', '#CC7832'],
+    ['MaxItems', '#C77DBB', 'italic'], ['ID', '#C77DBB'],
+  ]],
+  rust: ['order.rs', [
+    ["'a", '#20999D', 'italic'], ['println!', '#4EADE5'], ['#[derive(Debug, Clone)]', '#B3AE60'], ['usize', '#CF8E6D'], ['total', '#56A8F5'],
+    ['MAX_ITEMS', '#C77DBB', 'italic'], ['self', '#CF8E6D'],
+  ]],
+  cpp: ['order.cpp', [['#include', '#B3AE60'], ['<vector>', '#6AAB73'], ['total', '#56A8F5'], ['T', '#16BAAC'], ['double', '#CF8E6D'], ['price', '#C77DBB']]],
+};
+for (const [lang, [file, expected]] of Object.entries(LANGUAGES)) {
+  test(`${lang}: colors like the JetBrains IDE`, { skip: !grammar && 'no VS Code in .vscode-test (npm run test:vscode)' }, async () => {
+    const tokens = await colorize(themeFile('dark'), lang, fs.readFileSync(path.join(__dirname, 'samples', file), 'utf8'));
+    for (const [text, fg, style = ''] of expected) {
+      const t = tokens.find(x => x.text === text);
+      assert.ok(t, `${lang}: token ${text} not found in ${tokens.map(x => x.text).join(' | ')}`);
+      assert.equal(t.fg, fg, `${lang}: color of ${text}`);
+      assert.equal(t.style, style, `${lang}: style of ${text}`);
+    }
+  });
+}

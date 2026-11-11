@@ -19,10 +19,18 @@
 ![Islands Light – Kotlin](docs/light-kotlin.png)
 
 <details>
-<summary>More screenshots</summary>
+<summary>More screenshots (Kotlin, TypeScript, Python, Go, Rust, CSS, PHP, C++)</summary>
 
 ![Islands Dark – Kotlin](docs/dark-kotlin.png)
 ![Islands Light – Java](docs/light-java.png)
+![Islands Dark – TypeScript](docs/dark-typescript.png)
+![Islands Light – TypeScript](docs/light-typescript.png)
+![Islands Dark – Python](docs/dark-python.png)
+![Islands Dark – Go](docs/dark-go.png)
+![Islands Dark – Rust](docs/dark-rust.png)
+![Islands Dark – CSS](docs/dark-css.png)
+![Islands Dark – PHP](docs/dark-php.png)
+![Islands Dark – C++](docs/dark-cpp.png)
 
 </details>
 
@@ -46,6 +54,26 @@ color the way IntelliJ does (own value → fallback key → parent scheme). The 
   file status (git) colors, diff colors and the console palette for the terminal. With VS Code's modern
   (floating) layout the islands look just like in IntelliJ.
 - No bracket pair rainbow (IntelliJ doesn't color brackets either).
+
+## Languages
+
+Every language gets IntelliJ's base colors (keywords, strings, numbers, comments, declarations, calls, fields). On
+top of that, each language is mapped to the attributes of the matching JetBrains IDE:
+
+| Language | Colors like | Source of the colors |
+|---|---|---|
+| Java, Kotlin | IntelliJ IDEA | IntelliJ Community sources |
+| Python | PyCharm (`self` purple, builtins, keyword arguments, docstrings, decorators) | IntelliJ Community sources |
+| TypeScript, JavaScript | WebStorm (member calls blue, globals purple italic, regex, decorators) | values of WebStorm's JavaScript plugin |
+| HTML, XML, CSS/SCSS/Less | WebStorm (selectors, properties, values, colors, `!important`) | IntelliJ sources + WebStorm's CSS plugin |
+| Go | GoLand (packages, type references, calls, builtins) | values of GoLand's Go plugin |
+| Rust | RustRover (lifetimes, macros, attributes, `mut` underlined) | intellij-rust (MIT) |
+| PHP, C/C++ | PhpStorm / CLion – **approximated** | IntelliJ's language defaults (PhpStorm/CLion colors aren't available) |
+| Markdown, YAML, JSON, properties | IntelliJ IDEA | IntelliJ Community sources |
+
+**Semantic highlighting** (more precise than the grammars) is mapped for the language servers that provide it:
+JetBrains' Java/Kotlin server, VS Code's TypeScript/JavaScript, Pylance (Python), rust-analyzer, gopls
+(`"gopls": { "ui.semanticTokens": true }`), clangd and PHP servers with semantic tokens.
 
 ## Install
 
@@ -86,6 +114,8 @@ Together with [IntelliJ Java/Kotlin Navigation](https://marketplace.visualstudio
 - **Java without the JetBrains language server**: VS Code's Java grammar can't tell fields from locals or static
   calls from instance calls. The theme handles the common cases (field declarations and `obj.field` access are
   purple, calls use the text color); everything else needs semantic tokens from a language server.
+- **PHP and C/C++** follow IntelliJ's general rules (e.g. `$variables` and fields purple, preprocessor and macros
+  yellow); PhpStorm and CLion may differ in details.
 - **Static method calls in Java** are italic in IntelliJ. The JetBrains language server currently doesn't send
   semantic tokens for Java *methods*, so they stay upright in VS Code.
 - **Rounded islands with gaps** need VS Code's modern UI (default in recent versions). Older versions show the same

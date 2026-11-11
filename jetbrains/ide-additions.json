@@ -1,0 +1,105 @@
+{
+ "_comment": [
+  "Text attributes that the JavaScript/TypeScript plugin (WebStorm, IntelliJ IDEA Ultimate) and the Go plugin (GoLand)",
+  "register for the bundled 'Darcula' (dark) and 'Default' (light) schemes (<additionalTextAttributes>), read from",
+  "WebStorm/GoLand 2026.3. Only the color values are recorded here \u2013 the plugins themselves are not open source.",
+  "Fallback keys of JS.*, TS.*, CSS.*, GO_* are in scripts/scheme.js."
+ ],
+ "dark": {
+  "JS.LOCAL_VARIABLE": {
+   "FOREGROUND": "a9b7c6"
+  },
+  "JS.REGEXP": {
+   "FOREGROUND": "6897bb"
+  },
+  "JS.GLOBAL_VARIABLE": {
+   "FOREGROUND": "9876aa",
+   "FONT_TYPE": "3"
+  },
+  "JS.GLOBAL_FUNCTION": {
+   "FOREGROUND": "ffc66d"
+  },
+  "JS.INSTANCE_MEMBER_FUNCTION": {
+   "FOREGROUND": "ffc66d"
+  },
+  "TS.TYPE_GUARD": {
+   "BACKGROUND": "223C23"
+  },
+  "TS.TYPE_PARAMETER": {
+   "FOREGROUND": "507874"
+  },
+  "GO_BUILTIN_CONSTANT": {
+   "FOREGROUND": "cc7832"
+  },
+  "GO_BUILTIN_FUNCTION_CALL": {
+   "FOREGROUND": "cc7832"
+  },
+  "GO_BUILTIN_TYPE_REFERENCE": {
+   "FOREGROUND": "cc7832"
+  },
+  "GO_BUILTIN_VARIABLE": {
+   "FOREGROUND": "cc7832"
+  },
+  "GO_EXPORTED_FUNCTION_CALL": {
+   "FOREGROUND": "b09d79"
+  },
+  "GO_LOCAL_FUNCTION_CALL": {
+   "FOREGROUND": "b09d79"
+  },
+  "GO_METHOD_RECEIVER": {
+   "FOREGROUND": "4eade5",
+   "FONT_TYPE": "0"
+  },
+  "GO_PACKAGE": {
+   "FOREGROUND": "afbf7e",
+   "FONT_TYPE": "0"
+  },
+  "GO_TYPE_REFERENCE": {
+   "FOREGROUND": "6fafbd",
+   "FONT_TYPE": "0"
+  },
+  "GO_COMMENT_REFERENCE": {
+   "FOREGROUND": "A1A1A1"
+  },
+  "GO_SHADOWING_VARIABLE": {
+   "FOREGROUND": "7dbda2",
+   "FONT_TYPE": "0"
+  },
+  "GO_SYNTAX_UPDATE": {
+   "EFFECT_COLOR": "548AF7",
+   "EFFECT_TYPE": "2"
+  }
+ },
+ "light": {
+  "JS.LOCAL_VARIABLE": {
+   "FOREGROUND": "458383"
+  },
+  "JS.PARAMETER": {
+   "EFFECT_COLOR": "0",
+   "EFFECT_TYPE": "1"
+  },
+  "JS.REGEXP": {
+   "FOREGROUND": "ff"
+  },
+  "JS.GLOBAL_VARIABLE": {
+   "FOREGROUND": "660e7a",
+   "FONT_TYPE": "3"
+  },
+  "JS.GLOBAL_FUNCTION": {
+   "FONT_TYPE": "2"
+  },
+  "JS.INSTANCE_MEMBER_FUNCTION": {
+   "FOREGROUND": "914C07"
+  },
+  "TS.TYPE_GUARD": {
+   "BACKGROUND": "f0ffe1"
+  },
+  "TS.TYPE_PARAMETER": {
+   "FOREGROUND": "20999d"
+  },
+  "GO_SYNTAX_UPDATE": {
+   "EFFECT_COLOR": "3574F0",
+   "EFFECT_TYPE": "2"
+  }
+ }
+}

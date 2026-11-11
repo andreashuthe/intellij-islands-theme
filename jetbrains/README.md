@@ -13,5 +13,8 @@ Unmodified copies from [JetBrains/intellij-community](https://github.com/JetBrai
 | `expUI_*.theme.json` | `platform/platform-resources/src/themes/expUI/` (parent UI themes) |
 | `Darcula_Kotlin.xml`, `Default_Kotlin.xml` | `plugins/kotlin/base/resources/resources/colorScheme/` |
 | `Markdown*.xml`, `YAML*.xml`, `Xml*.xml` | `plugins/markdown/…`, `plugins/yaml/…`, `xml/xml-ui-common/…` (`colorSchemes/`) |
+| `PythonDarcula.xml`, `PythonDefault.xml` | `python/python-code-insight/resources/colorSchemes/` |
+| `RustDarcula.xml`, `RustDefault.xml` | [intellij-rust](https://github.com/intellij-rust/intellij-rust) `src/main/resources/org/rust/ide/colors/` (MIT, `LICENSE-intellij-rust-MIT.txt`, commit `c6657c02`) |
+| `ide-additions.json` | color values the JavaScript/TypeScript plugin (WebStorm) and the Go plugin (GoLand) register for the Darcula/Default schemes – only the values, the plugins are not open source |
 
 To update: copy newer versions of these files here, run `npm test`, check the screenshots (`npm run screenshots`).

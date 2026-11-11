@@ -1,0 +1,11 @@
+@import url("theme.css");
+/* layout */
+.order-list > li:hover, #main {
+    color: #3871e1 !important;
+    margin: 0 auto 12px;
+    font-family: "JetBrains Mono", monospace;
+    background: var(--island-bg, rgba(0, 0, 0, .5));
+}
+@media (max-width: 600px) {
+    div[data-state="open"] { display: none; }
+}
